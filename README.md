@@ -32,6 +32,20 @@ Si ya lo bajaron, siempre verifiquen si están actualizadxs:
 
 - `git pull` -> Siempre lo hacen para bajar los cambios del repo remoto y quedar en sincronía.
 
+## Trabajo con ramas
+
+El equipo deberá rabajar en ramas fuera de main y luego hacer pull request (pr) en github.
+
+- `git branch miNuevaRama` para crear una nueva rama
+- Se hacen los pass habituales
+- Una vez subidos los cambios a github, crear un pull request en github.
+- Una vez aceptado, se fusionan las ramas. Siempre conviene eliminar la rama fusionada (`miNuevaRama`) con main.
+- En local pasamos a la principal con `git switch main`, y hacemos un `git pull`
+- Borramos la rama fusionada `git branch -d miNuevaRama` (OJO, debemos estar en la `main` y borrar `miNuevaRama`)
+- Todo listo
+- Si queremos limpiar en local las referencias de las ramas eliminadas hacemos `git fetch --prune`
+
+
 
 ## Comandos básicos de NPM
 
@@ -45,3 +59,7 @@ Si ya lo bajaron, siempre verifiquen si están actualizadxs:
 ## Objetivos
 
 Incorporar un control de versiones a nuestro proyecto
+
+## Otro título
+
+Este es el cambio 1
