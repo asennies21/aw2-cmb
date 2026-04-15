@@ -45,3 +45,7 @@ Si ya lo bajaron, siempre verifiquen si están actualizadxs:
 ## Objetivos
 
 Incorporar un control de versiones a nuestro proyecto
+
+## Otro título 2
+
+Este es el cambio 2
