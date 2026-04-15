@@ -60,6 +60,6 @@ El equipo deberá rabajar en ramas fuera de main y luego hacer pull request (pr)
 
 Incorporar un control de versiones a nuestro proyecto
 
-## Otro título
+## Otro título 2
 
-Este es el cambio 1
+Este es el cambio 2
