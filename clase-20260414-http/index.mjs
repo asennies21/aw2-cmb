@@ -3,10 +3,12 @@ import http from 'node:http'
 import fsp from 'node:fs/promises'
 import path from 'node:path'
 
+console.log('ejecuta cuando se levanta el servidor')
+
 // Creamos una instancia de servidor
 const app = http.createServer(async (peticion, respuesta) => {
     //console.log(peticion) //<--- viene del cliente
-
+    console.log('se ejcuta en cada peticion')
     if (peticion.method === 'GET') {
 
         if (peticion.url === '/') {
@@ -44,3 +46,12 @@ app.listen(3000, () => {
     console.log(`Servidor escuchando en http://localhost:3000`)
 })
 
+
+
+
+// function x(otrafunc){
+//     // logica mas larga
+//     otrafunc()
+// }
+
+// x(()=>{console.log('funcion pasada y ejecutada')})
