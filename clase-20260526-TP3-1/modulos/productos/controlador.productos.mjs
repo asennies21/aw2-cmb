@@ -1,5 +1,7 @@
 import * as modelo from './modelo.productos.mjs'
 
+
+// GET
 export async function obtenerTodos(req, res){
     // Obtenemos la consulta a BD desde la capa modelo
     const respuesta = await modelo.obtenerTodos()//<--- funcion asíncrona
@@ -14,3 +16,4 @@ export async function obtenerTodos(req, res){
     
     res.json(respuestaDatos) //<--- ese arreglo
 }
+

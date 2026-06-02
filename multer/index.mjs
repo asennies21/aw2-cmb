@@ -7,9 +7,10 @@ const app = express()
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    if(mime.extension(file.mimetype) !== 'pdf'){
-        throw new Error('Extension incorrecta')
-    }
+    // Verificamos datos? -> throw y atrapa el callback error
+    // if(mime.extension(file.mimetype) !== 'pdf'){
+    //     throw new Error('Extension incorrecta')
+    // }
     cb(null, './files')
   },
   filename: function (req, file, cb) {
@@ -19,6 +20,7 @@ const storage = multer.diskStorage({
 })
 
 const upload = multer({
+  // Destino?
     storage:storage
 }).single('archivo')
 
@@ -28,10 +30,12 @@ app.use('/archivos',express.static('./files'))
 app.post('/upload',(req, res)=>{
     upload(req, res, (err)=>{
         if(err){
+            // Si hay un throw
             console.log(err)
             return res.sendStatus(500)
         }
         console.log(req.file)
+        console.log(req.body)
         res.sendStatus(200)
     })
 })
