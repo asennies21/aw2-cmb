@@ -15,7 +15,8 @@ app.use(express.urlencoded({extended:true}))
 app.use('/login', express.static('./fronts/front-login'))
 // front Admin
 function chequearAcceso(req, res, next){
-    const miidentificador = req.signedCookie('sesion','misecreto')
+    const miidentificador = req.signedCookies['sesion']
+    console.log(miidentificador)
     if(miidentificador === 'identificador'){
         return next()
     }
